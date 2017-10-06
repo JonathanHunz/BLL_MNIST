@@ -11,9 +11,9 @@ PYTHON_INTERPRETER = python3
 # COMMANDS                                                                      #
 #################################################################################
 
-# Install Python dependencies using conda
+# Install Python dependencies using pip
 requirements:
-	conda install --file requirements.txt
+	pip install -r requirements.txt
 
 # Make dataset
 data:
