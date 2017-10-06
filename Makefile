@@ -5,6 +5,7 @@
 #################################################################################
 
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+PYTHON_INTERPRETER = python3
 
 #################################################################################
 # COMMANDS                                                                      #
@@ -15,9 +16,8 @@ requirements:
 	conda install --file requirements.txt
 
 # Make dataset
-data: requirements download_data
-	# Run the prepare_dataset.py script
-	$(PYTHON_INTERPRETER) src/data/prepare_dataset.py
+data:
+	$(PYTHON_INTERPRETER) src/data/make_data.py
 
 # Delete all compiled Python files
 clean:
@@ -26,7 +26,3 @@ clean:
 # Lint using flake8
 lint:
 	flake8 --exclude=lib/,bin/,docs/conf.py .
-
-# Download raw data
-download_data:
-	# TODO: Implement download_data task
