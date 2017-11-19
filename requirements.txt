@@ -1,3 +1,6 @@
 Sphinx
 coverage
 flake8
+tensorflow
+numpy
+scipy

@@ -1,0 +1,20 @@
+{
+  "name": "mnist",
+  "element_count": 100,
+  "features": [
+    {
+      "name": "image",
+      "source": "train_data.gz",
+      "offset": 16,
+      "shape": [28, 28],
+      "type": "byte"
+    },
+    {
+      "name": "label",
+      "source": "train_labels.gz",
+      "offset": 8,
+      "shape": [1],
+      "type": "int"
+    }
+  ]
+}

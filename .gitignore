@@ -68,3 +68,4 @@ target/
 
 # Exclude data from source control by default
 /data/
+*tfrecords
