@@ -1,17 +1,27 @@
 {
   "name": "mnist",
   "element_count": 100,
+  "sources": [
+    {
+      "name": "mnist-images.gz",
+      "url": "http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz"
+    },
+    {
+      "name": "mnist-labels.gz",
+      "url": "http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz"
+    }
+  ],
   "features": [
     {
       "name": "image",
-      "source": "train_data.gz",
+      "source": "mnist-images.gz",
       "offset": 16,
       "shape": [28, 28],
       "type": "byte"
     },
     {
       "name": "label",
-      "source": "train_labels.gz",
+      "source": "mnist-labels.gz",
       "offset": 8,
       "shape": [1],
       "type": "int"
